@@ -14,8 +14,8 @@ router.post('/', async (req, res) => {
 
 router.get('/', async (req, res) => {
     try{
-        const createdBookmark = await Bookmark.find({})
-        res.status(400).json(createdBookmark)
+        const bookmarks = await Bookmark.find({})
+        res.status(200).json(bookmarks)
     }
     catch (error){
         res.status(400).json(error)
